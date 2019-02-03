@@ -23,4 +23,4 @@ offset = hslider("offset",1,0,5,0.01) : si.smoo;
 gen = osc1 * g1, osc2 * g2, osc3 * g3 :> ef.cubicnl(drive, offset) : fi.dcblocker : ve.moog_vcf_2b( filtRes, filtFreq );
 
 voice = gen;
-// process = gen;
+// process = voice;

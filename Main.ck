@@ -1,5 +1,6 @@
 Gain out;
-out => dac;
+out => dac.chan(8);
+out => dac.chan(7);
 
 JCRev verb;
 
@@ -50,6 +51,7 @@ fun void activateMIDI() {
     midiIn.open("Teensy MIDI");
 
     <<< midiIn.name() >>>;
+    <<< "Loaded" >>>;
 
     0 => int slider3Lag;
 
